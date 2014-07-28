@@ -63,7 +63,7 @@ class Goods extends CActiveRecord
     public function phoneNumber($attribute, $params='')
     {
 
-        if(preg_match("/^\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4}$/",$params) === 0)
+        if(preg_match("/^\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4}$/", $params) === 0)
         {
 
             $this->addError($attribute,
@@ -164,7 +164,15 @@ class Goods extends CActiveRecord
     public function getBucket(){
 
         $goodsList = array();
+
         foreach(Yii::app()->session['goods'] as $g){
+            /*
+             * по-нормальному не работает, нехай будут хэши
+            $modelGood = new Goods;
+            $modelGood->id = $g['id'];
+            $modelGood->name = $g['name'];
+            $modelGood->cost = $g['cost'];
+            */
             $goodsList[] = $g;
         }
         return $goodsList;

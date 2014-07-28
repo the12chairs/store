@@ -33,9 +33,24 @@ return array(
 	// application components
 	'components'=>array(
 		'user'=>array(
+            'class' => 'WebUser',
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+
+
+        'authManager' => array(
+
+            'class' => 'PhpAuthManager',
+            'defaultRoles' => array('guest'),
+        ),
+
+
+
+
+
+        'spy'=>array('class'=>'Spy'),
+
 		// uncomment the following to enable URLs in path-format
 
 		'urlManager'=>array(

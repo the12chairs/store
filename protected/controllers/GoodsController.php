@@ -62,10 +62,13 @@ class GoodsController extends Controller
     public function actionBucket(){
 
         $gModel= new Goods;
-        if(isset($_GET['id']))
+        if(isset($_GET['id'])){
             $gModel->add($_GET['id']);
+            Yii::app()->spy->send($_GET['id']);
+        }
 
         $bucket = $gModel->getBucket();
+        //var_dump($bucket);
         $this->render('bucket', array('data' => $bucket, 'model' => $gModel));
 
     }
