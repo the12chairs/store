@@ -32,12 +32,9 @@ class GoodsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update', 'bucket', 'validate'),
+				'actions'=>array('bucket', 'validate'),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+                'roles'=>array('user')
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -72,14 +69,6 @@ class GoodsController extends Controller
         $this->render('bucket', array('data' => $bucket, 'model' => $gModel));
 
     }
-
-
-
-
-
-
-
-
 
 
     public function actionValidate(){

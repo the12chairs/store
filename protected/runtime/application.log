@@ -2687,3 +2687,357 @@ REQUEST_URI=/store/index.php/goods/bucket
 in /var/www/html/store/protected/models/Goods.php (168)
 in /var/www/html/store/protected/controllers/GoodsController.php (70)
 in /var/www/html/store/index.php (13)
+2014/07/29 11:58:30 [error] [php] Invalid argument supplied for foreach() (/var/www/html/store/protected/models/Goods.php:168)
+Stack trace:
+#0 /usr/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /usr/yii/framework/web/filters/CFilterChain.php(133): GoodsController->runAction()
+#2 /usr/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /usr/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /usr/yii/framework/web/filters/CInlineFilter.php(58): GoodsController->filterAccessControl()
+#5 /usr/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /usr/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /usr/yii/framework/web/CController.php(265): GoodsController->runActionWithFilters()
+#8 /usr/yii/framework/web/CWebApplication.php(282): GoodsController->run()
+#9 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/html/store/index.php(13): CWebApplication->run()
+REQUEST_URI=/store/index.php/goods/bucket
+in /var/www/html/store/protected/models/Goods.php (168)
+in /var/www/html/store/protected/controllers/GoodsController.php (70)
+in /var/www/html/store/index.php (13)
+2014/07/29 11:59:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/adminCategories".' in /usr/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/adminCate...')
+#1 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/store/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/store/index.php/admin/adminCategories
+---
+2014/07/29 12:02:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/adminCategories".' in /usr/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/adminCate...')
+#1 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/store/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/store/index.php/admin/adminCategories
+---
+2014/07/29 12:04:18 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "index".' in /usr/yii/framework/web/CController.php:878
+Stack trace:
+#0 /usr/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/html/store/protected/modules/admin/controllers/DefaultController.php(7): CController->render('index')
+#2 /usr/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#3 /usr/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /usr/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /usr/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#8 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/store/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/store/index.php/admin/
+---
+2014/07/29 12:04:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /usr/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /usr/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /usr/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /usr/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /usr/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /usr/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /usr/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /usr/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/goods/adm...')
+#9 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/store/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/store/index.php/admin/goods/admin
+HTTP_REFERER=http://localhost/store/index.php/admin/goods
+---
+2014/07/29 12:06:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /usr/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /usr/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /usr/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /usr/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /usr/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /usr/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /usr/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /usr/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/categorie...')
+#9 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/store/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/store/index.php/admin/categories/admin
+HTTP_REFERER=http://localhost/store/index.php/admin/categories
+---
+2014/07/29 12:06:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /usr/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /usr/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /usr/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /usr/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /usr/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /usr/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /usr/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /usr/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/categorie...')
+#9 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/store/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/store/index.php/admin/categories/admin
+HTTP_REFERER=http://localhost/store/index.php/admin/categories
+---
+2014/07/29 12:09:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /usr/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /usr/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /usr/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /usr/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /usr/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /usr/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /usr/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /usr/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/categorie...')
+#9 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/store/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/store/index.php/admin/categories/admin
+HTTP_REFERER=http://localhost/store/index.php/admin/categories
+---
+2014/07/29 12:09:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /usr/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /usr/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /usr/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /usr/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /usr/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /usr/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /usr/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /usr/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/categorie...')
+#9 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/store/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/store/index.php/admin/categories/admin
+HTTP_REFERER=http://localhost/store/index.php/admin/categories
+---
+2014/07/29 12:09:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /usr/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /usr/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /usr/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /usr/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /usr/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /usr/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /usr/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /usr/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/categorie...')
+#9 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/store/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/store/index.php/admin/categories/admin
+HTTP_REFERER=http://localhost/store/index.php/admin/categories
+---
+2014/07/29 12:13:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /usr/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /usr/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /usr/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /usr/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /usr/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /usr/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /usr/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /usr/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/categorie...')
+#9 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/store/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/store/index.php/admin/categories/admin
+HTTP_REFERER=http://localhost/store/index.php/admin/categories
+---
+2014/07/29 12:13:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /usr/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /usr/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /usr/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /usr/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /usr/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /usr/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /usr/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /usr/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/categorie...')
+#9 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/store/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/store/index.php/admin/categories/admin
+HTTP_REFERER=http://localhost/store/index.php/admin/categories
+---
+2014/07/29 12:13:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /usr/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /usr/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 /usr/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /usr/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /usr/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /usr/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /usr/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /usr/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/categorie...')
+#9 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/store/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/store/index.php/admin/categories/admin
+HTTP_REFERER=http://localhost/store/index.php/admin/categories/create
+---
+2014/07/29 12:22:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "good".' in /usr/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('good')
+#1 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/store/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/store/index.php/good
+---
+2014/07/29 12:29:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/index".' in /usr/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/index')
+#1 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/store/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/store/index.php/admin/index
+---
+2014/07/29 12:29:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin".' in /usr/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/admin')
+#1 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/store/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/store/index.php/admin/admin
+---
+2014/07/29 12:29:13 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "admin".' in /usr/yii/framework/web/CController.php:878
+Stack trace:
+#0 /usr/yii/framework/web/CController.php(782): CController->renderPartial('admin', NULL, true)
+#1 /var/www/html/store/protected/modules/admin/controllers/DefaultController.php(7): CController->render('admin')
+#2 /usr/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#3 /usr/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /usr/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /usr/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#8 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/store/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/store/index.php/admin/
+---
+2014/07/29 12:29:31 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "index".' in /usr/yii/framework/web/CController.php:878
+Stack trace:
+#0 /usr/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/html/store/protected/modules/admin/controllers/DefaultController.php(7): CController->render('index')
+#2 /usr/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#3 /usr/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /usr/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /usr/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#8 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/store/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/store/index.php/admin/
+---
+2014/07/29 12:29:50 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "index".' in /usr/yii/framework/web/CController.php:878
+Stack trace:
+#0 /usr/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/html/store/protected/modules/admin/controllers/DefaultController.php(7): CController->render('index')
+#2 /usr/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#3 /usr/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /usr/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /usr/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#8 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/store/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/store/index.php/admin/
+---
+2014/07/29 12:29:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin".' in /usr/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/admin')
+#1 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/store/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/store/index.php/admin/admin
+---
+2014/07/29 12:30:01 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "index".' in /usr/yii/framework/web/CController.php:878
+Stack trace:
+#0 /usr/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/html/store/protected/modules/admin/controllers/DefaultController.php(7): CController->render('index')
+#2 /usr/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#3 /usr/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /usr/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /usr/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#8 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/store/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/store/index.php/admin
+---
+2014/07/29 12:31:07 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "index".' in /usr/yii/framework/web/CController.php:878
+Stack trace:
+#0 /usr/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/html/store/protected/modules/admin/controllers/DefaultController.php(7): CController->render('index')
+#2 /usr/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#3 /usr/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /usr/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /usr/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /usr/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#8 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/html/store/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/store/index.php/admin
+---
+2014/07/29 12:32:15 [error] [php] Undefined variable: model (/var/www/html/store/protected/modules/admin/views/default/index.php:39)
+Stack trace:
+#0 /usr/yii/framework/web/CController.php(869): DefaultController->renderFile()
+#1 /usr/yii/framework/web/CController.php(782): DefaultController->renderPartial()
+#2 /var/www/html/store/protected/modules/admin/controllers/DefaultController.php(7): DefaultController->render()
+#3 /usr/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /usr/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /usr/yii/framework/web/CController.php(286): DefaultController->runAction()
+#6 /usr/yii/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#7 /usr/yii/framework/web/CWebApplication.php(282): DefaultController->run()
+#8 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/store/index.php(13): CWebApplication->run()
+REQUEST_URI=/store/index.php/admin
+in /var/www/html/store/protected/modules/admin/views/default/index.php (39)
+in /var/www/html/store/protected/modules/admin/controllers/DefaultController.php (7)
+in /var/www/html/store/index.php (13)
+2014/07/29 12:35:08 [error] [php] Undefined variable: model (/var/www/html/store/protected/modules/admin/views/default/index.php:5)
+Stack trace:
+#0 /usr/yii/framework/web/CController.php(869): DefaultController->renderFile()
+#1 /usr/yii/framework/web/CController.php(782): DefaultController->renderPartial()
+#2 /var/www/html/store/protected/modules/admin/controllers/DefaultController.php(9): DefaultController->render()
+#3 /usr/yii/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /usr/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /usr/yii/framework/web/CController.php(286): DefaultController->runAction()
+#6 /usr/yii/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#7 /usr/yii/framework/web/CWebApplication.php(282): DefaultController->run()
+#8 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/store/index.php(13): CWebApplication->run()
+REQUEST_URI=/store/index.php/admin
+in /var/www/html/store/protected/modules/admin/views/default/index.php (5)
+in /var/www/html/store/protected/modules/admin/controllers/DefaultController.php (9)
+in /var/www/html/store/index.php (13)
+2014/07/29 12:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update".' in /usr/yii/framework/web/CController.php:483
+Stack trace:
+#0 /usr/yii/framework/web/CController.php(270): CController->missingAction('update')
+#1 /usr/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#2 /usr/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/default/u...')
+#3 /usr/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/html/store/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/store/index.php/admin/default/update/id/1
+HTTP_REFERER=http://localhost/store/index.php/admin
+---
