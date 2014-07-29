@@ -1,15 +1,25 @@
 
 
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'categories-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'id',
-		'category',
-        /*
-		array(
-			'class'=>'CButtonColumn',
-		),*/
-	),
-)); ?>
+    'dataProvider'=> $model->linked(),
+));
+
+
+
+
+
+
+
+
+
+
+/* $this->widget('zii.widgets.grid.CGridView', array(
+    'id'=>'categories-grid',
+    'dataProvider'=>$model->linked(),
+    'filter'=>$model,
+     array(
+        'class'=>'CButtonColumn',
+     ),
+));*/ ?>
+

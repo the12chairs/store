@@ -122,6 +122,22 @@ class Goods extends CActiveRecord
 
     }
 
+
+
+    public function linked(){
+        $command = Yii::app()->db->createCommand("SELECT category, goods.name  FROM goods INNER JOIN goods_link ON goods_link.id_good = goods.id INNER JOIN categories ON categories.id = id_cat");
+        $items = $command->queryAll();
+        $itemsProvider = new CArrayDataProvider($items, array(
+            'id' => 'good',
+            'keyField' => 'good',
+            'keys'=>array('category', 'good'),
+            'pagination' => array(
+                'pageSize' => 10,
+            )
+        ));
+        return $itemsProvider;
+    }
+
     public function findCat($cat){
         $command = Yii::app()->db->createCommand("SELECT * FROM `goods` WHERE `id` IN (SELECT `id_good` FROM `goods_link` WHERE `id_cat` = $cat)");
         return $command->queryAll();

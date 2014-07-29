@@ -4,7 +4,7 @@ class DefaultController extends Controller {
 
 
     public function actionIndex() {
-		$adminModel = new Categories;
+		$adminModel = new Goods;
         $this->render('index', array(
             'model'=>$adminModel,));
 	}
